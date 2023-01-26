@@ -89,7 +89,14 @@ class MainActivity : AppCompatActivity() {
     private fun calcTimesDiv(passedList: MutableList<Any>): MutableList<Any> {
         val newList = mutableListOf<Any>()
         var restartIndex = passedList.size
-
+/*kandasnd
+* a
+* dsa
+* sd
+* as
+* da
+* sd
+* a*/
         for (i in passedList.indices){
             if (passedList[i] is Char && i != passedList.lastIndex && i < restartIndex) {
                 val operator = passedList[i]
