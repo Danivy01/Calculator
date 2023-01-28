@@ -1,141 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/black"
     tools:viewBindingIgnore="true"
-    tools:ignore="HardcodedText"
     tools:context=".MainActivity">
-    <androidx.constraintlayout.widget.ConstraintLayout
+
+    <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:padding="20dp">
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.95">
 
-        <TextView
-            android:id="@+id/workingsTV"
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:lines="2"
-            android:maxLines="2"
-            android:textColor="@color/white"
-            android:textAlignment="textEnd"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toTopOf="@+id/resultsTV"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/resultsTV"
+            <Button
+                android:id="@+id/clearBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/clear" />
+
+            <Button
+                android:id="@+id/parenthesisBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/parenthesis" />
+
+            <Button
+                android:id="@+id/exponentBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/exponent" />
+
+            <Button
+                android:id="@+id/divideBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/divide" />
+        </TableRow>
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:lines="1"
-            android:maxLines="1"
-            android:textColor="@color/white"
-            android:textAlignment="textEnd"
-            android:textSize="40sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
+            android:layout_height="match_parent">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/sevenBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/seven" />
 
+            <Button
+                android:id="@+id/eightBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/eight" />
 
-    <LinearLayout
-        style="@style/buttonRow">
-        <Button
-            style="@style/buttonNumber"
-            android:onClick="allClearAction"
-            android:text="C"/>
-        <Button
-            style="@style/buttonNumber"
-            android:onClick="backSpaceAction"
-            android:text="⌫"/>
-        <Button
-            style="@style/buttonOperator"
-            android:text="/"/>
+            <Button
+                android:id="@+id/nineBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/nine" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/multiplyBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/multiply" />
+        </TableRow>
 
-    <LinearLayout
-        style="@style/buttonRow">
-        <Button
-            style="@style/buttonNumber"
-            android:text="7"/>
-        <Button
-            style="@style/buttonNumber"
-            android:text="8"/>
-        <Button
-            style="@style/buttonNumber"
-            android:text="9"/>
-        <Button
-            style="@style/buttonOperator"
-            android:text="x"/>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/fourBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/four" />
 
-    <LinearLayout
-        style="@style/buttonRow">
-        <Button
-            style="@style/buttonNumber"
-            android:text="4"/>
-        <Button
-            style="@style/buttonNumber"
-            android:text="5"/>
-        <Button
-            style="@style/buttonNumber"
-            android:text="6"/>
-        <Button
-            style="@style/buttonOperator"
-            android:text="-"/>
+            <Button
+                android:id="@+id/fiveBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/five" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/sixBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/six" />
 
-    <LinearLayout
-        style="@style/buttonRow">
-        <Button
-            style="@style/buttonNumber"
-            android:text="3"/>
-        <Button
-            style="@style/buttonNumber"
-            android:text="2"/>
-        <Button
-            style="@style/buttonNumber"
-            android:text="1"/>
-        <Button
-            style="@style/buttonOperator"
-            android:text="+"/>
+            <Button
+                android:id="@+id/addBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/add" />
+        </TableRow>
 
-    </LinearLayout>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <LinearLayout
-        style="@style/buttonRow">
+            <Button
+                android:id="@+id/oneBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/one" />
 
-        <Button
-            style="@style/buttonOperator"
-            android:text="." />
+            <Button
+                android:id="@+id/twoBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/two" />
 
-        <Button
-            style="@style/buttonNumber"
-            android:text="0" />
+            <Button
+                android:id="@+id/threeBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/three" />
 
-        <Button
-            style="@style/buttonNumber"
-            android:background="@drawable/rounded_corners"
-            android:backgroundTint="@color/darkGray"
-            android:textColor="@color/black"
-            android:textSize="40sp"
-            android:layout_width="100dp"
-            android:onClick="equalsAction"
-            android:text="="/>
+            <Button
+                android:id="@+id/subtractBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/subtract" />
+        </TableRow>
 
-    </LinearLayout>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
+            <Button
+                android:id="@+id/positiveNegativeBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/positiveNegative" />
 
-</LinearLayout>
+            <Button
+                android:id="@+id/zeroBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/decimalBTN"
+                style="@style/buttonAppearance"
+                android:text="@string/decimal" />
+
+            <Button
+                android:id="@+id/equalsBTN"
+                style="@style/buttonAppearance"
+                android:backgroundTint="@color/darkGray"
+                android:text="@string/equals" />
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/display"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="false"
+        android:inputType="none"
+        android:textSize="36sp"
+        android:textAlignment="textEnd"
+        tools:ignore="LabelFor" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        style="@style/backspaceAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/backspace"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_input_delete"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
