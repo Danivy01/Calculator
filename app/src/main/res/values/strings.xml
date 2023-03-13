@@ -13,8 +13,8 @@
     <string name="zero">0</string>
     
     <string name="clear">C</string>
-    <string name="exponent">^</string>
-    <string name="parenthesis">( )</string>
+    <string name="openParenthesis">(</string>
+    <string name="closeParenthesis">)</string>
     <string name="divide">÷</string>
     <string name="multiply">×</string>
     <string name="add">+</string>
@@ -25,6 +25,4 @@
 
 
     <string name="backspace"> </string>
-
-    <string name="display">0</string>
 </resources>

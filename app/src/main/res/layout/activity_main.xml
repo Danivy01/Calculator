@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/solutionDisplay"
         app:layout_constraintVertical_bias="0.95">
 
         <TableRow
@@ -25,14 +25,14 @@
                 android:text="@string/clear" />
 
             <Button
-                android:id="@+id/parenthesisBTN"
+                android:id="@+id/openParenthesisBTN"
                 style="@style/buttonAppearance"
-                android:text="@string/parenthesis" />
+                android:text="@string/openParenthesis" />
 
             <Button
-                android:id="@+id/exponentBTN"
+                android:id="@+id/closeParenthesisBTN"
                 style="@style/buttonAppearance"
-                android:text="@string/exponent" />
+                android:text="@string/closeParenthesis" />
 
             <Button
                 android:id="@+id/divideBTN"
@@ -143,22 +143,40 @@
     </TableLayout>
 
     <EditText
-        android:id="@+id/textView"
+        android:id="@+id/solutionDisplay"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="@string/display"
+        android:autofillHints="false"
+        android:keyboardNavigationCluster="false"
+        android:hint="0"
+
+        android:inputType="none"
+        android:textAlignment="textEnd"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/resultsDisplay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/resultsDisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="144dp"
         android:autofillHints="false"
         android:inputType="none"
-        android:textSize="36sp"
         android:textAlignment="textEnd"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/backspaceButton"
         style="@style/backspaceAppearance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
